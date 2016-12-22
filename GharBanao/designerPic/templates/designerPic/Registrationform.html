@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register at Gharbanao</title>
+</head>
+<body>
+      {% if error_message}
+          <p> {{error_message}}</p>
+      {%endif}
+<form action="{% url login designer.designerID %}" method="post">
+    {%csrf_token %}
+     Designer ID:<br>
+     <input type="text" name="designerID" value="{{designer.designerID}}"><br>
+      Password<br>
+    <input type="text" name="password" value="{{designer.password" ><br><br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
